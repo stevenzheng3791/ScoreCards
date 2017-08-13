@@ -113,6 +113,10 @@ class MatchCard: UIView  {
         setSetCardAway(score: setScoreAway)
     }
     
+    func setMatch(match: Match) {
+        setScoreCards(gameScoreHome: String(match.leftGames), gameScoreAway: String(match.rightGames), setScoreHome: String(match.leftSets), setScoreAway: String(match.rightSets))
+    }
+    
     func setTitle(title: String) {
         self.title.text = title
     }

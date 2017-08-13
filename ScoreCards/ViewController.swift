@@ -46,36 +46,46 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate, UITableView
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return matches.count
     }
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "matchCard", for: indexPath as IndexPath) as! MatchCardTableViewCell
-        cell.matchCard = MatchCard(frame: CGRect(x: 10, y: 20, width: cell.contentView.frame.width - 20, height: 200))
-        cell.matchCard.gameCardHome.setScore(score: String(matches[indexPath.row].leftGames))
-        cell.matchCard.setCardHome.setScore(score: String(matches[indexPath.row].leftSets))
-        cell.matchCard.gameCardAway.setScore(score: String(matches[indexPath.row].rightGames))
-        cell.matchCard.setCardAway.setScore(score: String(matches[indexPath.row].rightSets))
-        cell.addSubview(cell.matchCard!)
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         cell.backgroundColor = UIColor.clear
         cell.selectionStyle = .none
-
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "matchCard", for: indexPath as IndexPath) as! MatchCardTableViewCell
+        
+        let matchCard = MatchCard(
+            frame: CGRect(
+                x: CGFloat(constants.matchCardXOffset),
+                y: CGFloat(constants.matchCardYOffset),
+                width: cell.frame.width - 2 * CGFloat(constants.matchCardXOffset),
+                height: cell.frame.height - 2 * CGFloat(constants.matchCardYOffset)
+            )
+        )
+        
+        matchCard.setMatch(match: matches[indexPath.row])
+        cell.setMatchCard(matchCard: matchCard)
+        resolveSimultaneousGestures(tableView: matchCardsTable, cell: cell)
+        return cell
+    }
+    
+    func resolveSimultaneousGestures(tableView: UITableView, cell: UITableViewCell) {
+        /* Resolves the nested gesture recognizer issue between the table view and the cell */
+        let cell = cell as! MatchCardTableViewCell
         for scoreCard in cell.matchCard!.scoreCards {
-            for gestureRecognizer in matchCardsTable.gestureRecognizers! {
+            for gestureRecognizer in tableView.gestureRecognizers! {
                 gestureRecognizer.require(toFail: scoreCard.swipeUp)
             }
-            for gestureRecognizer in matchCardsTable.gestureRecognizers! {
+            for gestureRecognizer in tableView.gestureRecognizers! {
                 gestureRecognizer.require(toFail: scoreCard.swipeDown)
             }
         }
-        
-        return cell
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-    
-    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
-        return true
     }
 }
 

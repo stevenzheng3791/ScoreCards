@@ -12,4 +12,6 @@ import UIKit
 struct Constants {
     let backdropColor = UIColor(colorLiteralRed: 75/255, green: 75/255, blue: 75/255, alpha: 1)
     let matchCardCellHeight = 240
+    let matchCardXOffset = 20
+    let matchCardYOffset = 20
 }

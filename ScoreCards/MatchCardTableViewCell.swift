@@ -22,5 +22,11 @@ class MatchCardTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
+    func setMatchCard(matchCard: MatchCard) {
+        /* Attach the matchCard to this cell */
+        self.matchCard = matchCard
+        self.addSubview(matchCard)
+    }
 
 }
