@@ -13,6 +13,12 @@
 		73123B9D1F1853DB00FC8FEA /* ScoreCards.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 73123B9B1F1853DB00FC8FEA /* ScoreCards.xcdatamodeld */; };
 		73123B9F1F1853DB00FC8FEA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73123B9E1F1853DB00FC8FEA /* Assets.xcassets */; };
 		73123BA21F1853DB00FC8FEA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73123BA01F1853DB00FC8FEA /* LaunchScreen.storyboard */; };
+		73123BAA1F18540E00FC8FEA /* ScoreCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73123BA91F18540E00FC8FEA /* ScoreCard.swift */; };
+		73123BAC1F1A32F600FC8FEA /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73123BAB1F1A32F600FC8FEA /* UIViewExtension.swift */; };
+		73123BAE1F1AAD6900FC8FEA /* MatchCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73123BAD1F1AAD6900FC8FEA /* MatchCard.swift */; };
+		73123BB01F1BF09000FC8FEA /* Tennis Wallpaper.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 73123BAF1F1BF09000FC8FEA /* Tennis Wallpaper.jpg */; };
+		73923C901F3FD6ED00734B1C /* MatchCardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73923C8F1F3FD6ED00734B1C /* MatchCardTableViewCell.swift */; };
+		73923C921F40AAED00734B1C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73923C911F40AAED00734B1C /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +30,12 @@
 		73123B9E1F1853DB00FC8FEA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		73123BA11F1853DB00FC8FEA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		73123BA31F1853DB00FC8FEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		73123BA91F18540E00FC8FEA /* ScoreCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreCard.swift; sourceTree = "<group>"; };
+		73123BAB1F1A32F600FC8FEA /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		73123BAD1F1AAD6900FC8FEA /* MatchCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchCard.swift; sourceTree = "<group>"; };
+		73123BAF1F1BF09000FC8FEA /* Tennis Wallpaper.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Tennis Wallpaper.jpg"; sourceTree = "<group>"; };
+		73923C8F1F3FD6ED00734B1C /* MatchCardTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchCardTableViewCell.swift; sourceTree = "<group>"; };
+		73923C911F40AAED00734B1C /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +75,12 @@
 				73123BA01F1853DB00FC8FEA /* LaunchScreen.storyboard */,
 				73123BA31F1853DB00FC8FEA /* Info.plist */,
 				73123B9B1F1853DB00FC8FEA /* ScoreCards.xcdatamodeld */,
+				73123BA91F18540E00FC8FEA /* ScoreCard.swift */,
+				73123BAB1F1A32F600FC8FEA /* UIViewExtension.swift */,
+				73123BAD1F1AAD6900FC8FEA /* MatchCard.swift */,
+				73123BAF1F1BF09000FC8FEA /* Tennis Wallpaper.jpg */,
+				73923C8F1F3FD6ED00734B1C /* MatchCardTableViewCell.swift */,
+				73923C911F40AAED00734B1C /* Constants.swift */,
 			);
 			path = ScoreCards;
 			sourceTree = "<group>";
@@ -99,6 +117,7 @@
 				TargetAttributes = {
 					73123B901F1853DB00FC8FEA = {
 						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = NBU584CR3T;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -126,6 +145,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73123BB01F1BF09000FC8FEA /* Tennis Wallpaper.jpg in Resources */,
 				73123BA21F1853DB00FC8FEA /* LaunchScreen.storyboard in Resources */,
 				73123B9F1F1853DB00FC8FEA /* Assets.xcassets in Resources */,
 				73123B9A1F1853DB00FC8FEA /* Main.storyboard in Resources */,
@@ -139,9 +159,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73123BAC1F1A32F600FC8FEA /* UIViewExtension.swift in Sources */,
+				73123BAA1F18540E00FC8FEA /* ScoreCard.swift in Sources */,
 				73123B9D1F1853DB00FC8FEA /* ScoreCards.xcdatamodeld in Sources */,
 				73123B971F1853DB00FC8FEA /* ViewController.swift in Sources */,
+				73923C901F3FD6ED00734B1C /* MatchCardTableViewCell.swift in Sources */,
 				73123B951F1853DB00FC8FEA /* AppDelegate.swift in Sources */,
+				73123BAE1F1AAD6900FC8FEA /* MatchCard.swift in Sources */,
+				73923C921F40AAED00734B1C /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,6 +289,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = NBU584CR3T;
 				INFOPLIST_FILE = ScoreCards/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.szzheng.ScoreCards;
@@ -276,6 +302,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = NBU584CR3T;
 				INFOPLIST_FILE = ScoreCards/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.szzheng.ScoreCards;
@@ -303,6 +330,7 @@
 				73123BA81F1853DB00FC8FEA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
