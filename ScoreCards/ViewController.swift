@@ -13,7 +13,7 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate, UITableView
     //var scoreCard : ScoreCard!
     
     var matchCardsTable : UITableView!
-    var matches : [Int]!
+    var matches : [Match]!
 
     let constants = Constants()
     
@@ -36,7 +36,7 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate, UITableView
         matchCardsTable.separatorColor = UIColor.clear
         backdrop.addSubview(matchCardsTable)
         
-        matches = [1, 2, 3, 4, 5]
+        matches = [Match(), Match(), Match(), Match(), Match()]
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -49,6 +49,10 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate, UITableView
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "matchCard", for: indexPath as IndexPath) as! MatchCardTableViewCell
         cell.matchCard = MatchCard(frame: CGRect(x: 10, y: 20, width: cell.contentView.frame.width - 20, height: 200))
+        cell.matchCard.gameCardHome.setScore(score: String(matches[indexPath.row].leftGames))
+        cell.matchCard.setCardHome.setScore(score: String(matches[indexPath.row].leftSets))
+        cell.matchCard.gameCardAway.setScore(score: String(matches[indexPath.row].rightGames))
+        cell.matchCard.setCardAway.setScore(score: String(matches[indexPath.row].rightSets))
         cell.addSubview(cell.matchCard!)
         cell.backgroundColor = UIColor.clear
         cell.selectionStyle = .none

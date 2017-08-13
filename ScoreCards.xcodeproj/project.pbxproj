@@ -19,6 +19,7 @@
 		73123BB01F1BF09000FC8FEA /* Tennis Wallpaper.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 73123BAF1F1BF09000FC8FEA /* Tennis Wallpaper.jpg */; };
 		73923C901F3FD6ED00734B1C /* MatchCardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73923C8F1F3FD6ED00734B1C /* MatchCardTableViewCell.swift */; };
 		73923C921F40AAED00734B1C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73923C911F40AAED00734B1C /* Constants.swift */; };
+		73923C941F40C23300734B1C /* Match.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73923C931F40C23300734B1C /* Match.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		73123BAF1F1BF09000FC8FEA /* Tennis Wallpaper.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Tennis Wallpaper.jpg"; sourceTree = "<group>"; };
 		73923C8F1F3FD6ED00734B1C /* MatchCardTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchCardTableViewCell.swift; sourceTree = "<group>"; };
 		73923C911F40AAED00734B1C /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		73923C931F40C23300734B1C /* Match.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Match.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 				73123BAF1F1BF09000FC8FEA /* Tennis Wallpaper.jpg */,
 				73923C8F1F3FD6ED00734B1C /* MatchCardTableViewCell.swift */,
 				73923C911F40AAED00734B1C /* Constants.swift */,
+				73923C931F40C23300734B1C /* Match.swift */,
 			);
 			path = ScoreCards;
 			sourceTree = "<group>";
@@ -161,6 +164,7 @@
 			files = (
 				73123BAC1F1A32F600FC8FEA /* UIViewExtension.swift in Sources */,
 				73123BAA1F18540E00FC8FEA /* ScoreCard.swift in Sources */,
+				73923C941F40C23300734B1C /* Match.swift in Sources */,
 				73123B9D1F1853DB00FC8FEA /* ScoreCards.xcdatamodeld in Sources */,
 				73123B971F1853DB00FC8FEA /* ViewController.swift in Sources */,
 				73923C901F3FD6ED00734B1C /* MatchCardTableViewCell.swift in Sources */,
