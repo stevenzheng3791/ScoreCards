@@ -9,8 +9,6 @@
 import UIKit
 
 class ViewController: UIViewController, UIGestureRecognizerDelegate, UITableViewDataSource, UITableViewDelegate {
-
-    //var scoreCard : ScoreCard!
     
     var matchCardsTable : UITableView!
     var matches : [Match]!
