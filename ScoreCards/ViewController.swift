@@ -85,5 +85,23 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate, UITableView
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    func addMatchCard(match: Match) {
+        // Add the match with id to the matches array
+        matches.append(match)
+        matchCardsTable.reloadData()
+    }
+    
+    func deleteMatchCard(match: Match) {
+        // Delete the match with id from the matches array
+        var index = 0
+        for i in 0..<matches.count {
+            if (matches[i].id == match.id) {
+                index = i
+                break
+            }
+        }
+        matches.remove(at: index)
+        matchCardsTable.reloadData()
+    }
 }
-

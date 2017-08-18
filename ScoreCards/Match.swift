@@ -8,7 +8,8 @@
 
 import Foundation
 
-struct Match {
+class Match {
+    var id = UUID().uuidString
     var leftSets = 2
     var leftGames = 2
     var rightSets = 2
